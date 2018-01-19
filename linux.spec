@@ -4,13 +4,13 @@
 #
 
 Name:           linux
-Version:        4.14.11
+Version:        4.14.0
 Release:        499
 License:        GPL-2.0
 Summary:        The Linux kernel
 Url:            http://www.kernel.org/
 Group:          kernel
-Source0:        https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.14.11.tar.xz
+Source0:        file:///workdir/out/sos_rpm_kernel/kernel.tar.gz
 Source1:        config
 Source2:        cmdline
 Source3:        installkernel
@@ -28,6 +28,7 @@ BuildRequires:  flex
 BuildRequires:  bison
 BuildRequires:  kmod
 BuildRequires:  linux-firmware
+BuildRequires:  lz4
 
 Requires: systemd-console
 
@@ -106,7 +107,7 @@ Group:          kernel
 Linux kernel install script
 
 %prep
-%setup -q -n linux-4.14.11
+%setup -q -n kernel
 
 #     000X  cve, bugfixes patches
 
