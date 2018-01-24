@@ -3,7 +3,7 @@
 # things break
 #
 
-Name:           linux
+Name:           linux-cwp
 Version:        4.14.0
 Release:        499
 License:        GPL-2.0
